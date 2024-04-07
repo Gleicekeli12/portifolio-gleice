@@ -1,0 +1,234 @@
+html {
+    color: #fff; /*cor*/
+    scroll-behavior: smooth;  /*comportamento de rolagem: suave*/
+}
+
+body { /*corpo*/
+    font-family: "Tilt Neon", sans-serif; /*família de fontes: "Poppins", sem serifa*/
+    margin: 0 auto; /*margem    automatica*/
+    max-width: 1120px; /*largura*/
+    background: linear-gradient(150deg, #000000, #610739);  /*plano de fundo: gradiente linear*/
+    background-size: 120% 120%; /*tamanho de fundo*/
+}
+
+.cabecalho {
+    display: flex; /*mostrar*/
+    justify-content: space-between; /*justificar-conteúdo     espaco entre*/
+    align-items: center; /*alinhar itens   centro*/
+    padding: 30px 15px; /*30 cima baixo --- 15 esquerda direita*/
+}
+
+.cabecalho .logo {
+    width: 75px; /*largura*/
+    height: 75px; /*altura*/
+    border-radius: 50%; /*raio da borda*/
+    border: 2px solid #fff; /*borda     solido*/
+    text-decoration: underline; /*decoração de texto: sublinhado*/
+    text-align: center; /*alinhamento de texto: centro*/
+    line-height: 65px; /*altura da linha*/
+    font-family: "Tilt Neon", sans-serif; /*família de fontes: "Raleway", sem serifa*/
+    transition: 0.2s;
+}
+
+.cabecalho a:hover .logo { /*hover passar o mouse*/
+    color: rgb(85, 1, 53);
+    border: 2px solid rgb(85, 1, 53);
+}
+
+.cabecalho .menu li a {
+    font-size: 20px; /*tamanho da fonte*/
+    text-transform: capitalize; /*transformação de texto: capitalizar*/
+    padding: 10px 20px; /*preenchimento interno*/
+    transition: 0.2s;
+}
+
+.cabecalho .menu li a:hover {
+    color: rgb(85, 1, 53);
+    border-radius: 50px;
+}
+
+.home {
+    display: flex;
+    min-height: calc(100vh -125px); /*altura minima= funcao*/
+    align-items: center;
+    gap: 50px; /*brecha*/
+    justify-content: space-between;
+}
+
+.home .informacoes {
+    display: flex;
+    flex-direction: column; /*direção flexível: coluna*/
+    gap: 15px;
+    letter-spacing: 2px; /*espaçamento entre letras*/
+    padding: 0 15px;
+    max-width: 50%; /*largura maxima*/
+}
+
+.home .informacoes h1 {
+    font-family: "Tilt Neon", sans-serif;
+    font-size: 45px;
+    margin-bottom: 20px; /*margem inferior*/
+}
+
+.home .informacoes p {
+    font-family: "Tilt Neon", sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.home .redes-sociais {
+    display: flex;
+    gap: 20px;
+}
+
+.home .redes-sociais a i {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    font-size: 26px;
+    transition: 0.3s;
+}
+
+.home .redes-sociais a i:hover {
+    color: rgb(85, 1, 53);
+    border: 1px solid rgb(85, 1, 53);
+    transform: scale(1.1); /*transformar: escala*/
+}
+
+.home .container-foto .foto {
+    max-width: 450px;
+    border-radius: 50%;
+}
+
+.home .container-foto img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.home .foto.sombra-interna {
+    background: linear-gradient(to right, #180409, #01090e, #180409); /*plano de fundo: gradiente linear*/
+    background-size: 180% 180%;
+    animation: gradient-animation 5s ease infinite;
+}
+
+.projetos {
+    padding: 70px 0 70px; /* 70cima baixo  0 lados*/
+}
+
+.projetos .titulo {
+    text-align: center;
+    padding: 60px 0;
+    font-size: 45px;
+    font-weight: 500; /*espessura da fonte*/
+    text-transform: uppercase; /*transformação de texto: maiúscula*/
+}
+
+.projetos .container-projetos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /*envoltório flexível*/
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.projetos .projeto {
+    max-width: 260px;
+    max-height: 500px;
+    position: relative;  /*posição: relativa*/
+    display: none;
+}
+
+.projetos .projeto.ativo{
+    display: block;    /* 2 classes*/
+}
+
+.projetos .projeto img{
+    height: 100%;
+}
+
+.projetos .projeto h3{
+    background-color:rgb(13, 6, 14);
+    width: 100%;
+    padding-left: 20px;    /*preenchimento à esquerda*/
+    padding-bottom: 10px;  /*fundo de preenchimento*/
+    padding-top: 10px;   /*topo acolchoado*/
+    position: absolute;   /*posição: absoluta*/
+    bottom: 0;   /*fundo*/
+}
+
+.projetos .projeto .informacoes-projeto{
+    position: absolute;   /*posição*/
+    top: 0;   /*principal   topo*/
+    width: 100%;
+    height: 100%;
+    font-weight: 600;   /*espessura da fonte*/
+    opacity: 0;  /*opacidade*/
+    transition: 0.3s;   /*transição*/
+    padding: 20px;
+}
+
+.projetos .container-projetos .projeto:hover .informacoes-projeto{
+    opacity: 0.8;
+    background-color: #000;
+}
+
+.projetos .btn-mostrar-projetos{
+    background: none;
+    font-family: "Tilt Neon", sans-serif;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    color: #fff;
+    width: 180px;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;  /*cursor: ponteiro*/
+}
+
+.projetos .btn-mostrar-projetos:hover{
+    background-color: rgb(49, 4, 32);
+    transition: 0.3s;
+}
+
+.projetos .btn-mostrar-projetos.remover{
+    display: none;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
